@@ -1,0 +1,7 @@
+# Todas las rutas que no son archivos reales van al controlador frontal
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+# No mostrar el listado de directorios
+Options -Indexes
